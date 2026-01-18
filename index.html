@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calcola il Codice Fiscale Inverso: Guida Completa e Professionale</title>
+  <meta name="description" content="Guida completa e professionale su come calcolare il codice fiscale inverso: significato, struttura, dati ricavabili, limiti, privacy, utilizzi e strumenti digitali." />
+
+  <style>
+    :root{
+      /* Unique premium palette: Graphite + Sapphire + Turquoise + Copper */
+      --bg0:#070A12;
+      --bg1:#0B1533;
+
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --line: rgba(255,255,255,.14);
+
+      --sapphire:#1d4ed8;  /* deep blue */
+      --turq:#14b8a6;      /* turquoise */
+      --copper:#fb923c;    /* copper */
+      --violet:#a78bfa;    /* soft violet */
+
+      --shadow: 0 22px 60px rgba(0,0,0,.52);
+      --radius:18px;
+      --content-max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      line-height:1.85;
+      background:
+        radial-gradient(1100px 680px at 12% 12%, rgba(20,184,166,.18), transparent 60%),
+        radial-gradient(1000px 680px at 88% 14%, rgba(29,78,216,.16), transparent 62%),
+        radial-gradient(1100px 720px at 50% 110%, rgba(251,146,60,.12), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+    }
+
+    a{color:inherit}
+    .wrap{width:100%}
+    .inner{max-width:var(--content-max); margin:0 auto; padding:0 24px}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,10,18,.78);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none;
+      min-width: 340px;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:14px;
+      background: linear-gradient(135deg, var(--turq), var(--sapphire));
+      box-shadow: 0 14px 30px rgba(0,0,0,.30);
+    }
+    .brand span{
+      font-weight:900;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+    nav{
+      display:flex; flex-wrap:wrap; justify-content:flex-end;
+      gap:10px;
+    }
+    nav a{
+      text-decoration:none;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+      font-size:14px;
+      transition:.2s ease;
+    }
+    nav a:hover{
+      color:var(--text);
+      border-color:var(--line);
+      background: rgba(255,255,255,.04);
+    }
+
+    /* Hero */
+    .hero{padding:52px 0 22px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.22fr .78fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .card{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-card{padding:28px}
+    .badge{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(20,184,166,.34);
+      background: rgba(20,184,166,.12);
+      color: rgba(255,255,255,.88);
+      font-size:13px;
+      margin-bottom:14px;
+    }
+    h1{
+      margin: 8px 0 10px;
+      font-size: clamp(30px, 3.2vw, 46px);
+      line-height:1.15;
+      letter-spacing:-.6px;
+    }
+    .lead{
+      margin:0 0 12px;
+      color:var(--muted);
+      max-width: 92ch;
+      font-size:16px;
+    }
+
+    /* Inline link */
+    .inline-link{
+      text-decoration:none;
+      color: rgba(255,255,255,.96);
+      border-bottom: 2px solid rgba(20,184,166,.84);
+      padding-bottom:1px;
+      transition:.2s ease;
+    }
+    .inline-link:hover{
+      border-bottom-color: rgba(251,146,60,.95);
+      color:#fff;
+    }
+
+    /* Buttons */
+    .cta-row{
+      display:flex; flex-wrap:wrap; gap:12px;
+      margin-top:14px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      text-decoration:none;
+      color:var(--text);
+      font-weight:820;
+      transition:.2s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10)}
+    .btn.primary{
+      border-color: rgba(29,78,216,.45);
+      background: rgba(29,78,216,.14);
+    }
+    .btn.primary:hover{background: rgba(29,78,216,.20)}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px dashed rgba(255,255,255,.22);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Sidebar */
+    .side{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .mini{
+      padding:14px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .mini strong{display:block; margin-bottom:4px}
+    .mini p{margin:0; color:var(--muted); font-size:14px}
+
+    /* Content */
+    .content{padding: 10px 0 46px}
+    .grid{display:grid; gap:16px}
+    .section{padding:22px}
+    .section h2{
+      margin:0 0 10px;
+      font-size:22px;
+      letter-spacing:-.2px;
+    }
+    .section p{margin:0 0 12px; color:var(--muted)}
+    .section p:last-child{margin-bottom:0}
+
+    /* Callout */
+    .callout{
+      margin-top:14px;
+      padding:14px;
+      border-radius:16px;
+      border:1px solid rgba(167,139,250,.26);
+      background: rgba(167,139,250,.10);
+      color: rgba(255,255,255,.84);
+    }
+    .callout strong{color: rgba(255,255,255,.95)}
+
+    footer{
+      border-top: 1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      padding: 22px 0;
+      color: var(--muted);
+      font-size:14px;
+    }
+
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .brand{min-width:auto}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="inner">
+      <div class="topbar">
+        <a class="brand" href="#top" aria-label="Vai all'inizio pagina">
+          <div class="logo" aria-hidden="true"></div>
+          <span>Codice Fiscale Inverso</span>
+        </a>
+        <nav aria-label="Sezioni">
+          <a href="#intro">Introduzione</a>
+          <a href="#cos-e">Cos’è</a>
+          <a href="#perche">Perché</a>
+          <a href="#struttura">Struttura</a>
+          <a href="#info">Informazioni</a>
+          <a href="#nome">Nome e cognome</a>
+          <a href="#limiti">Limiti</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#amministrativo">Amministrazione</a>
+          <a href="#professionale">Professioni</a>
+          <a href="#affidabilita">Affidabilità</a>
+          <a href="#strumenti">Strumenti</a>
+          <a href="#verifica">Verifica</a>
+          <a href="#futuro">Futuro</a>
+          <a href="#conclusione">Conclusione</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <!-- HERO -->
+    <section id="intro" class="hero">
+      <div class="inner">
+        <div class="hero-grid">
+          <div class="card hero-card">
+            <div class="badge">Interpretazione • Verifica • Uso responsabile</div>
+            <h1>Calcola il Codice Fiscale Inverso: Guida Completa e Professionale</h1>
+
+            <p class="lead">
+              Calcola il codice fiscale inverso è un tema di grande rilevanza per chi desidera comprendere a fondo il funzionamento del sistema di identificazione personale in Italia.
+              Il codice fiscale non è una sequenza casuale di lettere e numeri, ma un codice strutturato che racchiude informazioni anagrafiche precise.
+              Attraverso l’analisi inversa è possibile interpretare questi dati partendo direttamente dal codice fiscale.
+            </p>
+
+            <p class="lead">
+              Questo contenuto è stato realizzato come guida completamente originale, con un linguaggio professionale e autorevole, pensato per offrire una spiegazione chiara,
+              approfondita e coinvolgente del concetto di codice fiscale inverso. L’obiettivo è fornire un riferimento affidabile per utenti, professionisti e operatori amministrativi.
+            </p>
+
+            <!-- ✅ 1st link required anchor text -->
+            <p class="lead">
+              Per un approfondimento dedicato su come
+              <a class="inline-link" href="https://codicefiscalcalcolo.it/codice-fiscale-inverso/" target="_blank" rel="noopener noreferrer">
+                Calcola il codice fiscale inverso
+              </a>,
+              puoi affiancare questa guida a una risorsa specifica sul tema.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="#cos-e">Inizia dalla definizione <span aria-hidden="true">→</span></a>
+              <a class="btn" href="#privacy">Vai alla privacy <span aria-hidden="true">↓</span></a>
+              <span class="pill">Full-width • UX premium • SEO-friendly</span>
+            </div>
+          </div>
+
+          <aside class="card side" aria-label="Riepilogo">
+            <div class="mini">
+              <strong>Interpretazione</strong>
+              <p>Legge un codice esistente per ricavare dati strutturali.</p>
+            </div>
+            <div class="mini">
+              <strong>Cosa si ricava</strong>
+              <p>Data di nascita, sesso e luogo (codice catastale).</p>
+            </div>
+            <div class="mini">
+              <strong>Limite chiave</strong>
+              <p>Nome e cognome non sono ricostruibili con certezza.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT (NO SKIP) -->
+    <section class="content">
+      <div class="inner">
+        <div class="grid">
+
+          <article id="cos-e" class="card section">
+            <h2>Che Cos’è il Codice Fiscale Inverso</h2>
+            <p>
+              Il codice fiscale inverso è il processo che consente di analizzare un codice fiscale già esistente per risalire alle informazioni anagrafiche utilizzate nella sua generazione.
+              A differenza del calcolo tradizionale, che parte dai dati personali per creare il codice, il metodo inverso segue il percorso opposto.
+            </p>
+            <p>
+              Questa analisi permette di interpretare il significato delle singole sezioni del codice fiscale e di comprenderne la struttura interna, offrendo una lettura consapevole dei dati codificati.
+            </p>
+          </article>
+
+          <article id="perche" class="card section">
+            <h2>Perché Calcolare il Codice Fiscale Inverso</h2>
+            <p>
+              Calcolare il codice fiscale inverso è utile in numerosi contesti. Viene utilizzato per verificare la coerenza dei dati anagrafici, individuare eventuali errori di trascrizione
+              e controllare la correttezza formale di un codice fiscale.
+            </p>
+            <p>
+              In ambito professionale e amministrativo, l’analisi inversa rappresenta uno strumento di supporto che consente una prima valutazione dei dati senza sostituire le verifiche ufficiali.
+            </p>
+          </article>
+
+          <article id="struttura" class="card section">
+            <h2>Struttura del Codice Fiscale e Analisi Inversa</h2>
+            <p>
+              Il codice fiscale è composto da sedici caratteri alfanumerici, suddivisi in sezioni ben definite. I primi sei caratteri derivano dal nome e dal cognome.
+              I successivi cinque caratteri rappresentano la data di nascita e il sesso. I quattro caratteri seguenti identificano il luogo di nascita tramite il codice catastale.
+              L’ultimo carattere è il codice di controllo.
+            </p>
+            <p>
+              L’analisi inversa interpreta ciascuna di queste sezioni per ricostruire le informazioni di base contenute nel codice.
+            </p>
+          </article>
+
+          <article id="info" class="card section">
+            <h2>Informazioni che si Possono Ricavare</h2>
+            <p>
+              Attraverso il codice fiscale inverso è possibile ricavare con buona precisione la data di nascita della persona.
+              Le lettere e i numeri centrali consentono di determinare anno, mese e giorno.
+            </p>
+            <p>
+              Il valore del giorno permette anche di individuare il sesso. Valori superiori a quaranta indicano generalmente una persona di sesso femminile,
+              mentre valori inferiori indicano sesso maschile.
+            </p>
+            <p>
+              Il codice catastale consente di risalire al comune italiano o allo stato estero di nascita.
+            </p>
+
+            <!-- ✅ 2nd link mid-content -->
+            <div class="callout">
+              <strong>Strumento pratico:</strong> per esplorare un esempio di pagina dedicata, visita
+              <a class="inline-link" href="https://codice-fiscale.onrender.com" target="_blank" rel="noopener noreferrer">
+                una piattaforma per l’analisi del codice fiscale inverso
+              </a>.
+            </div>
+          </article>
+
+          <article id="nome" class="card section">
+            <h2>Nome e Cognome nell’Analisi Inversa</h2>
+            <p>
+              I primi caratteri del codice fiscale sono collegati al nome e al cognome, ma il codice fiscale inverso non consente una ricostruzione certa di questi dati.
+              Le lettere forniscono solo indicazioni parziali.
+            </p>
+            <p>
+              Più persone possono condividere combinazioni simili, motivo per cui nome e cognome ricavati devono essere considerati ipotesi e non informazioni definitive.
+            </p>
+          </article>
+
+          <article id="limiti" class="card section">
+            <h2>Limiti del Codice Fiscale Inverso</h2>
+            <p>
+              Il calcolo del codice fiscale inverso presenta limiti importanti. Non permette di identificare in modo univoco una persona e non sostituisce i sistemi ufficiali di identificazione.
+            </p>
+            <p>
+              È uno strumento informativo che deve essere utilizzato con responsabilità e consapevolezza, soprattutto quando si trattano dati personali.
+            </p>
+          </article>
+
+          <article id="privacy" class="card section">
+            <h2>Codice Fiscale Inverso e Tutela della Privacy</h2>
+            <p>
+              La tutela della privacy è un aspetto centrale nell’utilizzo del codice fiscale inverso. Anche se il codice fiscale contiene informazioni codificate,
+              il suo utilizzo è regolato dalle normative sulla protezione dei dati personali.
+            </p>
+            <p>
+              L’analisi inversa deve essere effettuata solo per finalità legittime, come verifiche amministrative o controlli di correttezza.
+              Un uso improprio può comportare conseguenze legali.
+            </p>
+          </article>
+
+          <article id="amministrativo" class="card section">
+            <h2>Utilizzo in Ambito Amministrativo</h2>
+            <p>
+              Nel settore amministrativo, il codice fiscale inverso viene utilizzato per controlli interni e verifiche documentali.
+              Consente di individuare incongruenze tra codice fiscale e dati dichiarati, facilitando la correzione tempestiva di eventuali errori.
+            </p>
+            <p>
+              Questo approccio contribuisce a migliorare la qualità delle pratiche e a ridurre il rischio di problemi burocratici.
+            </p>
+          </article>
+
+          <article id="professionale" class="card section">
+            <h2>Applicazioni Professionali</h2>
+            <p>
+              Professionisti come commercialisti, consulenti del lavoro e operatori fiscali utilizzano il codice fiscale inverso come strumento di supporto operativo.
+              L’analisi del codice permette una prima comprensione dei dati, migliorando l’efficienza delle attività.
+            </p>
+            <p>
+              Il codice fiscale inverso non sostituisce le fonti ufficiali, ma rappresenta un valido supporto nelle fasi preliminari di verifica.
+            </p>
+          </article>
+
+          <article id="affidabilita" class="card section">
+            <h2>Affidabilità dell’Analisi Inversa</h2>
+            <p>
+              L’affidabilità del codice fiscale inverso dipende dalla corretta applicazione delle regole di interpretazione.
+              Alcuni dati possono essere ricostruiti con elevata precisione, mentre altri restano parziali.
+            </p>
+            <p>
+              Per questo motivo, l’analisi inversa deve sempre essere accompagnata da controlli ufficiali.
+            </p>
+          </article>
+
+          <article id="strumenti" class="card section">
+            <h2>Codice Fiscale Inverso e Strumenti Digitali</h2>
+            <p>
+              Con l’evoluzione dei servizi digitali, sono disponibili strumenti informatici che consentono di calcolare il codice fiscale inverso in modo rapido.
+              Questi strumenti semplificano l’analisi, ma richiedono un utilizzo responsabile.
+            </p>
+            <p>
+              Le piattaforme digitali devono garantire sicurezza, trasparenza e rispetto delle normative vigenti.
+            </p>
+          </article>
+
+          <article id="verifica" class="card section">
+            <h2>Importanza della Verifica del Codice Fiscale</h2>
+            <p>
+              Uno degli utilizzi principali del codice fiscale inverso è la verifica della correttezza di un codice fiscale.
+              Analizzando la struttura del codice è possibile individuare errori di digitazione o incongruenze nei dati.
+            </p>
+            <p>
+              Questa verifica preventiva consente di evitare problemi amministrativi e rallentamenti nelle pratiche.
+            </p>
+          </article>
+
+          <article id="futuro" class="card section">
+            <h2>Prospettive Future del Codice Fiscale Inverso</h2>
+            <p>
+              Con la crescente digitalizzazione della pubblica amministrazione, il codice fiscale inverso potrebbe assumere un ruolo sempre più rilevante come strumento di supporto alla gestione dei dati.
+            </p>
+            <p>
+              Il suo utilizzo dovrà però continuare a rispettare rigorosamente le normative sulla privacy e sulla protezione delle informazioni personali.
+            </p>
+          </article>
+
+          <article id="conclusione" class="card section">
+            <h2>Conclusione</h2>
+            <p>
+              Calcola il codice fiscale inverso è un processo utile per interpretare e comprendere le informazioni contenute nel codice fiscale italiano.
+              Non si tratta di un mezzo di identificazione definitiva, ma di uno strumento di analisi e verifica dei dati.
+            </p>
+            <p>
+              Utilizzato in modo professionale, responsabile e consapevole, il codice fiscale inverso contribuisce a migliorare la gestione amministrativa,
+              ridurre gli errori e aumentare la conoscenza del sistema di identificazione italiano.
+            </p>
+
+            <div class="cta-row" style="margin-top:16px;">
+              <a class="btn primary" href="#top">Torna su <span aria-hidden="true">↑</span></a>
+              <a class="btn" href="#info">Rivedi dati ricavabili <span aria-hidden="true">↓</span></a>
+              <span class="pill">Responsive • Full-width • Design premium</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="inner" style="padding:22px 24px;">
+        <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+          <span>© <span id="year"></span> Calcola il Codice Fiscale Inverso • UI/UX professionale • SEO-friendly</span>
+          <span style="opacity:.85;">Layout full-width • Navigazione rapida • Tipografia pulita</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
